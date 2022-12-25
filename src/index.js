@@ -3,9 +3,9 @@ const path = require("path");
 const PORT = 4032;
 const app = express();
 const router = express.Router();
-const orderRoute = require("./router/orderRoutes");
+const orderRoute = require("../router/orderRoutes");
 app.use(express.json());
-require("./config/db");
+require("../config/db");
 
 app.set("view engine", "ejs");
 

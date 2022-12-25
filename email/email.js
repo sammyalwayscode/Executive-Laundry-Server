@@ -3,11 +3,11 @@ const nodemailer = require("nodemailer");
 const ejs = require("ejs");
 const path = require("path");
 
-const GOOGLE_SECRET = "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";
+const GOOGLE_SECRET = "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";
 const GOOGLE_ID =
-  "1040362973230-57ml7lkm6vite3po8u1m3c0eslqqqtj8.apps.googleusercontent.com";
+  "173120448715-vltjhfgtehk80213e0bmkp1fh2ab4s6d.apps.googleusercontent.com";
 const GOOGLE_REFRESHTOKEN =
-  "1//044GtnHtA03fnCgYIARAAGAQSNwF-L9IrLrWh16qX4YYMaRTT45KkTuATkoGOmm1AfF_htx8cgKsnXII44auI8o4ZXVKGtU1OcU0";
+  "1//0407PCA2R4WbECgYIARAAGAQSNwF-L9Ir78aaHFMVjpiyAeoNRj0wbNolaMNUpVBrYt5XylG-H1bmNOmVHfjH2yyx43fmt8g7Jvo";
 const GOOGLE_REDIRECT = "https://developers.google.com/oauthplayground";
 
 const oAuth = new google.auth.OAuth2(GOOGLE_ID, GOOGLE_SECRET, GOOGLE_REDIRECT);
@@ -29,7 +29,7 @@ const recivedOrder = async (
       service: "gmail",
       auth: {
         type: "OAuth2",
-        user: "olorundasamuel2@gmail.com",
+        user: "executivelaundry001@gmail.com",
         refreshToken: accessToken.token,
         clientId: GOOGLE_ID,
         clientSecret: GOOGLE_SECRET,
@@ -50,7 +50,7 @@ const recivedOrder = async (
     });
 
     const mailOptions = {
-      from: "Executive Laundry👔👔👕👕👖👖👗 <olorundasamuel2@gmail.com>",
+      from: "Executive Laundry👔👔👕👕👖👖👗 <executivelaundry001@gmail.com>",
       to: email,
       subject: "Your Order Has Been Recived",
       html: data,
@@ -80,7 +80,7 @@ const notifyAdmin = async (
       service: "gmail",
       auth: {
         type: "OAuth2",
-        user: "olorundasamuel2@gmail.com",
+        user: "executivelaundry001@gmail.com",
         refreshToken: accessToken.token,
         clientId: GOOGLE_ID,
         clientSecret: GOOGLE_SECRET,
@@ -101,8 +101,9 @@ const notifyAdmin = async (
     });
 
     const mailOptions = {
-      from: "New Laundry👔👔👕👕👖👖👗 <olorundasamuel2@gmail.com>",
-      to: "samuelolorunda1@gmail.com",
+      from: "New Laundry👔👔👕👕👖👖👗 <executivelaundry001@gmail.com",
+      to: "executivelaundry22@gmail.com",
+      // to: "samuelolorunda1@gmail.com",
       subject: `New Order From ${name}`,
       html: data,
     };
