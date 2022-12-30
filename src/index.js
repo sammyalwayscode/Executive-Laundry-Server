@@ -1,8 +1,10 @@
 const express = require("express");
+const cors = require("cors");
 const PORT = 4032;
 const app = express();
 const orderRoute = require("../router/orderRoutes");
 app.use(express.json());
+app.use(cors({ origin: "*" }));
 require("../config/db");
 
 app.set("view engine", "ejs");
