@@ -1,8 +1,11 @@
 const mongoose = require("mongoose");
 
-const URI = "mongodb://localhost/laundryOrders";
+// const URI = "mongodb://localhost/laundryOrders";
+const liveURI =
+  "mongodb+srv://Sammy:sammysam@cluster0.aqlrqqw.mongodb.net/Executive_Laundry?retryWrites=true&w=majority";
+
 mongoose
-  .connect(URI)
+  .connect(liveURI)
   .then(() => {
     console.log("Data Base Connected");
   })

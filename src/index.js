@@ -17,7 +17,6 @@ app.get("/home", (req, res) => {
   res.render("mail");
 });
 
-app.use("/", router);
 app.use("/api", orderRoute);
 
 app.listen(PORT, () => {
