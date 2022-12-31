@@ -101,7 +101,7 @@ const notifyAdmin = async (
     });
 
     const mailOptions = {
-      from: "New Laundry👔👔👕👕👖👖👗 <executivelaundry001@gmail.com",
+      from: "New Laundry👔👔👕👕👖👖👗 <executivelaundry001@gmail.com>",
       to: "executivelaundry22@gmail.com",
       // to: "samuelolorunda1@gmail.com",
       subject: `New Order From ${name}`,
