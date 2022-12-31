@@ -72,7 +72,7 @@ const makeOrders = async (req, res) => {
       .catch((error) => {
         console.log("Admin: An Error Occoured", error);
       });
-    res.status(400).json({
+    res.status(201).json({
       message: "Order Sent",
       data: newOrders,
     });
